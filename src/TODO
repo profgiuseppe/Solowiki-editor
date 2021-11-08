@@ -1,0 +1,26 @@
+* [GUI] more internationalization
+* [GUI] short descriptions for actions, to be added to the undo labels using
+    surroundwith getValue(SHORT_DESCRIPTION)
+* [GUI] fix horizontal scroolbar in editor when resizing
+* [Help] Add usage of menus and dialog boxes
+* [GUI] Add PDF save option (libraries may be too big)
+* Transition to JNLP for I/O operations
+* stand alone links (add .html to wikilinks)
+* Copy and paste as derived classes of defaulteditorkit subclasses, with undo/redo name fix
+
+* open file, new and save must set the page of the editorPane in the correct way [may have been done already]
+
+* may use ClassLoader instead of MainWindow.this.getClass()? [NO]
+
+* Javadoc for all classes and methods
+
+* instead of a warning, use a yes/no dialog to ask if the user want to generate
+    the preview before checking links
+* check for edits after last preview and call the same dialog
+
+* CHECK for generasted image path after saving (in both saved file and preview)
+
+Bugs to be confirmed:
+* [GUI] fix the status bar text shown when hovering over the toolbar (it shows the first link in the text)
+* in the HTML rendering pane, if an image has been scaled (width=xxx),
+    the height is not proportional but fixed at something around 40px)

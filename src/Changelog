@@ -1,0 +1,153 @@
+Jun 13, 2010
+ * Fixed a bug in find text
+ * New help page (manual)
+
+Jun 5, 2010
+ * Automatic file exension while saving
+
+May 10, 2010
+ * Fixed a bug while saving
+
+Apr 30, 2010
+ * Fixed a bug in the "check links" functionality
+ * [GUI] table size in the "check links" dialog, row sorting
+
+Apr 9, 2010
+ * Code cleanup (redundant methods)
+ * new FileManager
+
+Apr 5, 2010
+ * Better image management (both for preview and save as HTML)
+ * Improved the code of some constructors
+
+Mar 31, 2010
+ * Ask to save before closing the application
+ * Retrieve article content from website
+
+Mar 29, 2010
+ * Solved a bug in NewFileAction
+
+Mar 28, 2010
+ * Added a workaround while checking links
+ * link check table has multilanguage titles now
+ * warning message if no preview has been created before checking links
+ * solved a bug: open file -> new -> open the same file now works
+ * more tooltip and undo labels
+ * style menu
+ * formatting actions tooltip different from undo labels
+
+Mar 27, 2010
+ * [GUI] Wikilink button and associated action removed
+ * MyCompoundEdit moved to its own file
+ * [GUI] Added tooltip for New, Open, Save, Add image, Bold and Preview buttons
+ * undo and redo for italics, h2, h3, nowiki, underline, formatimagelink, braces actions
+ * clears undo and redo lists after saving/opening a file
+ * save dialog before new/open if there is any unsaved change
+ * save button behaves like save menu item (no dialog if the file name is already known)
+
+Mar 26, 2010
+ * Added generic Undo and Redo
+ * Added compound undo and redo for bold action
+
+Feb 25, 2010
+ * [GUI] check link existence by connecting to the Web
+
+Feb 24, 2010
+ * centralized Action management
+ * custom controls for menu and button
+ * underline button
+ * "add image" button funcionality
+
+Feb 23, 2010
+ * common actions for menu items and toolbar buttons
+
+Feb 22, 2010
+ * [GUI] Added buttons toolbar
+   * buttons and icons, no actions
+
+Feb 20, 2010
+ * Improved TeX support:
+   * TeX images will be saved with the HTML result
+   * directory management for temporary and result files
+
+Jan 10, 2010
+ * Added better TeX support:
+   * TeX formulas can be saved to file (in system temp directory)
+   * TeX formulas are visible in the preview tab
+
+Feb 18, 2009
+ * [GUI] Better internationalization
+ * Added options panel for customization
+ * Added options load/save
+
+Feb 17, 2009
+ * [GUI] AboutBox: centralized link click management
+ * typos, @author and minor changes
+
+Feb 16, 2009
+ * [GUI] Removed: mediawiki authors list from about dialog
+ * [GUI] Added: Java Wikipedia API link and license in about dialog
+ * [GUI] Added: check for updates dialog
+ * [Update] Added: cancel download
+ * [Update] Added: download in tmp file
+ * [Help] (en) Updated
+ * [GUI] Added: Save generated HTML to file
+ * [GUI] Added: "New" menu item
+
+Feb 15, 2009
+ * [Parser] Change: self-made parser abandoned, transition to bliki
+
+Mar 3, 2008
+ * [Parser] Added: list support
+
+Feb 22, 2008
+ * [GUI] Added: clickable URLs in about dialog
+
+Feb 21, 2008
+ * [Help] Fixed: error in italian version
+ * [GUI] Fixed: status text when saving
+ * [GUI] Added: text size change in editor window
+ * [GUI} Added: erase all
+
+Feb 20, 2008
+ * [WikiParser] Added: name attribute support for <ref>
+
+Feb 16, 2008
+ * [Fixed bug]: save file doing nothing 
+
+Feb 12, 2008
+ * [GUI] Added: text length label
+
+Jan 19, 2008
+ * [GUI] Added: replace dialog box functionality
+ * [GUI] Added: find text functionality
+
+Jan 18, 2008
+ * [GUI] Added: find and replace dialog box
+
+Jan 6, 2008
+ * [GUI] Fixed: layout of HTML code generated while in full HTML mode (gamma2)
+ * [GUI] Added: Italian translation (gamma2)
+ * [Help] Added: Italian translation (gamma2)
+
+
+Jan 4, 2008
+ * Added: StringUtils class to hold my String methods (gamma2)
+ * [GUI] Added: "Select All" to Edit and popup menus (gamma2)
+ * [GUI] Added: "Open file" dialog and functionality (gamma2)
+ * [GUI] Added: "Save" and "Save As..." dialog and functionality (gamma2)
+ * [WikiParser] Started conversion of doBlockLevels (gamma2)
+
+Jan 3, 2008
+ * [GUI] Added: help panel and index.html (gamma2)
+ * [GUI] Added: popup menu (gamma2)
+ * [GUI] Added: link shown in status bar when mouse is over it (gamma2)
+
+Jan 2, 2008
+ * [WikiParser] Added: internal links support (gamma2)
+ * [WikiParser] Added: <ref> and {{references}} support (gamma2)
+
+Jan 1, 2008
+ * Project starts (gamma2)
+ * [WikiParser] Added: bold, italics and headings support (gamma2)
+ * [GUI] Main window, menus, about dialog (gamma2)

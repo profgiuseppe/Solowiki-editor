@@ -1,0 +1,364 @@
+<!-- 
+    Document   : index.html
+    Created on : 2-gen-2008, 0.15.24
+    Author     : Giuseppe Profiti
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="it">
+    <head>
+        <meta content="text/html; charset=ISO-8859-1"
+              http-equiv="content-type">
+        <title>Manuale di SoloWiki Editor</title>
+        <style type="text/css">
+            .menuentry {
+                font-style: italic;
+            }
+            .warning {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Manuale di Solowiki Editor</h1>
+        <h2><a class="mozTocH2" name="mozTocId677861"></a>Indice</h2>
+        <ul id="mozToc">
+            <!--mozToc h2 1 h3 2 h4 3--><li><a
+                    href="#mozTocId677861">Indice</a></li>
+            <li><a href="#mozTocId637650">About</a></li>
+            <li><a href="#mozTocId157662">Licenza</a></li>
+            <li><a href="#mozTocId537982">Installazione</a>
+                <ul>
+                    <li><a href="#mozTocId512384">Disinstallazione</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId925490">Avvio
+                    dell'editor</a></li>
+            <li><a href="#mozTocId46627">La
+                    finestra principale</a>
+                <ul>
+                    <li><a href="#mozTocId480278">La
+                            barra dei pulsanti</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId246335">Modifica
+                    del testo</a>
+                <ul>
+                    <li><a href="#mozTocId522890">Formattazione
+                            Mediawiki</a>
+                        <ul>
+                            <li><a href="#mozTocId217211">Formattazione
+                                    usuale</a></li>
+                            <li><a href="#mozTocId366698">Aggiungi
+                                    immagine</a></li>
+                            <li><a href="#mozTocId172538">Formatta
+                                    immagine</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#mozTocId579028">Come creare
+                            l'anteprima</a></li>
+                    <li><a href="#mozTocId932067">Salvare il testo</a></li>
+                    <li><a href="#mozTocId197795">Undo
+                            and redo</a></li>
+                    <li><a href="#mozTocId775328">Formule TeX</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId856247">Funzionalità online</a>
+                <ul>
+                    <li><a href="#mozTocId573659">Scaricare una
+                            pagina</a></li>
+                    <li><a href="#mozTocId293318">Verifica i link</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId378647">Opzioni</a>
+                <ul>
+                    <li><a href="#mozTocId522465">Opzioni di
+                            visualizzazione</a></li>
+                    <li><a href="#mozTocId789632">Opzioni del sito</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId539616">Problemi
+                    noti e miglioramenti previsti</a></li>
+        </ul>
+        <h2><a class="mozTocH2" name="mozTocId637650"></a>About</h2>
+        <p><b>SoloWiki</b> è un software libero (vedi <a
+                href="about.shtml#License">licenza</a>)
+            sviluppato da Giuseppe Profiti. </p>
+        <p><b>SoloWiki</b> (C) 2008-2009, Giuseppe Profiti</p>
+        <p>Se volete contattarmi per suggerimenti, richieste di
+            funzionalità,
+            segnalazione errori o solo per dirmi "grazie", usate i forum e gli
+            altri
+            strumenti messi a disposizione nella <a id="SoloWiki"
+                                                    href="https://sourceforge.net/projects/solowiki/">pagina del
+                progetto </a> su
+            Sourceforge. Potete anche mandarmi un email a <a
+                href="mailto:gamma2@users.sourceforge.net">gamma2@users.sourceforge.net
+            </a></p>
+        <p>Questo programma è nato come regalo per Erica, a cui è
+            dedicato.</p>
+        <h2><a class="mozTocH2" name="mozTocId157662"></a><a
+                name="License"></a>Licenza</h2>
+        <p>Questo programma è software libero; è lecito redistribuirlo o
+            modificarlo
+            secondo i termini della <a
+                href="http://www.softwarelibero.it/gnudoc/gpl.it.txt">GNU
+                General Public
+                License</a> come è pubblicata dalla Free Software Foundation; o
+            la versione 2
+            della licenza o una versione successiva.<br>
+            Nota: la traduzione non è ufficiale, nella sezione inglese di questa
+            guida
+            è presente la versione originale. </p>
+        <p>Per il riconoscimento della sintassi Mediawiki, SoloWiki
+            utilizza la libreria
+            <a href="http://code.google.com/p/gwtwiki/">Java
+                Wikipedia Api</a>, realizzata da
+            <a href="https://sourceforge.net/users/axelcl">Axel C.
+                Kramer</a> e
+            rilasciata secondo i termini della licenza
+            <a href="http://www.gnu.org/copyleft/lesser.html">GNU
+                Lesser General
+                Public License</a>.</p>
+        <p>La classe StringUtils è copyright di Giuseppe Profiti ed è
+            rilasciata secondo i termini della <a
+                href="http://www.opensource.org/licenses/mit-license.php">MIT
+                License.</a>.
+        </p>
+        <p>La libreria <a href="https://swing-layout.dev.java.net/">Swing
+                Layout
+                Extensions</a>, usata per compatibilità con Java 1.5, è
+            rilasciata secondo i
+            termini della <a href="http://www.gnu.org/copyleft/lesser.html">GNU
+                Lesser
+                General Public License </a>. </p>
+        <p>Le icone provengono da  <a
+                href="http://java.sun.com/developer/techDocs/hi/repository/">Java
+                look and feel
+                Graphics Repository</a> , (C) 2000 by Sun Microsystems, Inc.</p>
+        <p>Il parsing delle formule TeX e la generazione delle relative
+            immagini è realizzato grazie alla libreria <a
+                href="http://jmathtex.sourceforge.net/">JMathTeX</a>,
+            (C) 2004-2007 Universiteit Gent ed è rilasciata in base alla GNU
+            General Public License.</p>
+        <h2><a class="mozTocH2" name="mozTocId537982"></a>Installazione</h2>
+        <p>Java 5 o successivo è richiesto per poter eseguire il
+            programma.</p>
+        <p>
+            Dopo aver scaricato il software ti ritroverai con un file compresso.
+            Per installare Solowiki
+            Editor devi decomprimere il file in una cartella, che sarà la cartella
+            di esecuzione del programma. Non è necessario altro: tutto quello che è
+            richiesto per il funzionamento del programma si trova nella cartella
+            scelta.</p>
+        <h3><a class="mozTocH3" name="mozTocId512384"></a>Disinstallazione</h3>
+        <p>Per disinstallare SoloWiki editor, cancella la cartella in cui
+            hai
+            estratto i file durante l'installazione. Mi piacerebbe che mi mandassi
+            una e-mail con le tue opinioni, cosa non ti è piaciuto e cosa si
+            potrebbe migliorare.
+        </p>
+        <h2><a class="mozTocH2" name="mozTocId925490"></a>Avvio
+            dell'editor</h2>
+        <p>Per avviare l'editor fai doppio click sul file SoloWiki.jar
+            oppure
+            scrivi il comando seguente in una console:</p>
+        <pre>java -jar SoloWiki.jar</pre>
+        <h2><a class="mozTocH3" name="mozTocId46627"></a>La
+            finestra principale</h2>
+        <p>La finestra principale è composta dal menu, la barra dei
+            pulsanti, il
+            tab di editing, il tab per l'output e la barra di stato.<br>
+            Non tutte le funzionalità sono presenti sia nel menu sia nella barra
+            dei pulsanti.</p>
+        <ul>
+            <li>il tab di editing è quello dove scrivi il testo con
+                formattazione Mediawiki</li>
+            <li>il tab di output è quello in cui puoi vedere l'HTML
+                generato</li>
+            <li>la barra di stato contiene informazioni utili sullo stato
+                delle operazioni richieste</li>
+        </ul>
+        <p>L'output può essere visualizzato nello stesso modo in cui il
+            tuo
+            browser visualizza HTML oppure in formato testuale comprensivo di tutti
+            i tag HTML. Si può passare da una all'altra visualizzazione dal menu <span
+                class="menuentry">Azioni-&gt;Visualizza HTML</span>.</p>
+        <h3><a class="mozTocH3" name="mozTocId480278"></a>La
+            barra dei pulsanti</h3>
+        Nella barra dei pulsanti, da sinistra a destra, puoi trovare:<br>
+    <ul>
+        <li>crea un nuovo file</li>
+        <li>apri un file</li>
+        <li>salva</li>
+        <li><a href="#mozTocId366698">aggiungi immagine</a></li>
+        <li>parentesi graffe, grassetto, corsivo, sottolineato, h2, h3</li>
+        <li>Img è <a href="#mozTocId172538">formatta
+                immagine</a></li>
+        <li><a href="#mozTocId579028">crea anteprima</a></li>
+        <li><a href="#mozTocId293318">verifica i link</a></li>
+    </ul>
+    <h2><a class="mozTocH2" name="mozTocId246335"></a>Modifica
+        del testo</h2>
+    <h3><a class="mozTocH3" name="mozTocId522890"></a>Formattazione
+        Mediawiki</h3>
+    <p>Il testo può essere formattato usando sia il menu <span
+            class="menuentry">Stile</span> sia la barra dei
+        pulsanti. In caso qualcosa sia selezionato, l'editor circonderà la
+        selezione con la formattazione richiesta, altrimenti inserirà la
+        formattazione nel punto in cui si trova il cursore.</p>
+    <h4><a class="mozTocH4" name="mozTocId217211"></a>Formattazione
+        usuale</h4>
+    <p>Grassetto, corsivo, template, h2 e h3 si comportano come
+        nell'editor
+        interno di Mediawiki: i caratteri uguale, parentesi e apici
+        circonderanno la selezione.<br>
+        Sottolinea aggiunge i tag HTML u prima e dopo la selezione.
+        Nowiki circonda la selezione con &lt;nowiki&gt;. H2 e h3
+        aggiungono
+        2 o 3 caratteri uguale (=) rispettivamente.</p>
+    <h4><a class="mozTocH4" name="mozTocId366698"></a>Aggiungi
+        immagine</h4>
+    <p>Aggiungi immagine ti permette di scegliere un file dal tuo
+        sistema,
+        l'immagine sarà aggiunta al testo come  [[FILE:nomefile]]
+        (dove FILE è la stringa specificata nel menu opzioni). Per esempio, se
+        scegli il file cane.jpg da una qualsiasi cartella del tuo disco, il
+        programma aggiungerà [[File:canejpg]] al testo.</p>
+    <p>Quando salvi l'HTML generato dal programma, il link punterà la
+        percorso assoluto del file se il file non è memorizzato in una
+        sottodirectory della cartella di destinazione per l'HTML, altrimenti
+        punterà al path relativo.</p>
+    <p>Maggiori informazioni sulla gestione dei file sono presenti
+        in  <span style="text-decoration: underline;"></span><a
+            href="#issues">problemi noti e miglioramenti previsti</a>.</p>
+    <h4><a class="mozTocH4" name="mozTocId172538"></a>Formatta
+        immagine</h4>
+    <p>Formatta immagine (Img) circonda il testo selezionato in
+        questo modo: [[FILE:<span style="font-style: italic;">selezione</span>|thumb|200px|]].
+        Per esempio, se selezioni il testo gatto.jpg e usi Img,  il
+        testo diventerà [[File:gatto.jpg|thumb|200px|]]. Leggi <a
+            href="#issues">problemi noti e miglioramenti
+            previsti</a>. per maggiori informazioni sui alcuni problemi.</p>
+    <h3><a class="mozTocH3" name="mozTocId579028"></a>Come
+        creare l'anteprima</h3>
+    <p>Dopo che hai scritto o caricato il testo, puoi creare
+        l'anteprima premendo i tasti ALT+SPAZIO, tramite il menu <span
+            class="menuentry">Azioni-&gt;Crea anteprima</span>
+        o usando il pulsante sulla barra degli strumenti.</p>
+    <p>L'anteprima sarà visibile nel tab di output. Nella barra di
+        stato sarà visualizzata la pagina di destinazione dei collegamenti su
+        cui si passerà il puntatore del mouse. Per esempio se hai scritto [[<span
+            class="menuentry">da qualche parte</span>|testo]]
+         il collegamento <span style="text-decoration: underline;">testo</span>
+        sarà visualizzato nel tab di output e la stringa <span
+            class="menuentry">da qualche parte</span> sarà
+        visualizzata nella barra di stato.</p>
+    <h3><a class="mozTocH3" name="mozTocId932067"></a>Salvare
+        il testo</h3>
+    <p>Puoi salvare sia il testo con la formattazione Mediawiki sia
+        l'HTML generato. <span class="menuentry">File-&gt;Salva</span>
+        e <span class="menuentry">File-&gt;Salva come...</span>
+        (e i relativi pulsanti) si riferiscono al testo. Se non specifichi una
+        estensione per il file, l'editor aggiungerà .txt automaticamente.</p>
+    <p><span class="menuentry">File-&gt;Esporta HTML</span>
+        rigenera l'HTML e lo salva. Se crei un'anteprima, modifichi il testo e
+        salvi l'HTML, sarà salvata la versione modificata.</p>
+    <p>Un riferimento a una immagine sarà relativo alla cartella di
+        destinazione se l'immagine è memorizzata nella cartella di destinazione
+        o in una sua sottodirectory, altrimenti sarà usato il percorso
+        completo. Le immagini TeX sono memorizzate nella cartella temporanea
+        del sistema fino a quando non viene salvato l'HTML, quindi le immagini
+        TeX saranno salvate in una sottodirectory della directory di
+        destinazione.</p>
+    <h3><a class="mozTocH3" name="mozTocId197795"></a>Undo
+        e redo</h3>
+    <p>Puoi annullare o ripetere le modifiche apportate dopo l'ultimo
+        salvataggio del testo. Ogni carattere scritto o cancellato conta come
+        una singola modifica. La formattazione aggiunta usando i pulsanti e i
+        menu (per esempio == ==, {{ }} e così via) è considerata come una
+        singola modifica.
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId775328"></a>Formule
+        TeX</h3>
+    <p>Le formule TeX
+        possono essere inserite utilizzando il tag &lt;math&gt;. La
+        libreria utilizzata al momento per la resa delle formule non supporta
+        tutta la sintassi TeX. Vedi la sezione <a href="#issues">problemi
+            noti</a> per maggiori informazioni.
+    </p>
+    <h2><a class="mozTocH2" name="mozTocId856247"></a>Funzionalità
+        online</h2>
+    <p>Le funzionalità online sono disabilitate di default. Puoi
+        attivarle usando il menu <span class="menuentry">Azioni-&gt;Azioni
+            online</span>.
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId573659"></a>Scaricare
+        una pagina</h3>
+    <p>Invece di scrivere il testo o caricarlo da un file locale,
+        puoi scaricarlo da un sito usando <span class="menuentry">File-&gt;Apri
+            da sito...</span>. Dopo aver inserito il nome della pagina nella
+        finestra di dialogo, sarà visualizzata la finestra principale.
+        Attenzione: lo scaricamento avviene in background, quindi dovrai
+        attendere che un messaggio nella barra di stato ti avvisi che il testo
+        è stato scaricato completamente. La finestra principale continuerà a
+        rispondere agli input durante lo scaricamento.
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId293318"></a>Verifica
+        i link</h3>
+    <p>Dopo aver generato l'anteprima puoi verificare che i
+        collegamenti inseriti puntino a pagine esistenti sul sito. Questa
+        funzionalità è accessibile da un pulsante nella barra degli strumenti.
+        Dopo aver premuto il pulsante apparirà una nuova finestra contenente
+        una tabella: ciascuna riga si riferisce a un collegamento. La prima
+        colonna contiene il nome della pagina, la seconda contiene una casella:
+        se la casella è vuota vuol dire che la pagina non esiste sul sito, in
+        caso contrario la casella conterrà un segno di spunta. Le righe possono
+        essere ordinate in base al nome della pagina o allo stato del
+        collegamento, sia in ordine ascendente che discendente,
+        cliccando sul titolo della colonna.
+    </p>
+    <h2><a class="mozTocH2" name="mozTocId378647"></a>Opzioni</h2>
+    <h3><a class="mozTocH3" name="mozTocId522465"></a>Opzioni
+        di visualizzazione</h3>
+    <p>Puoi cambiare la dimensione del carattere dell'editor usando
+        il menu <span class="menuentry">Carattere</span>.
+    </p>
+    <h3><a class="mozTocH3" name="mozTocId789632"></a>Opzioni
+        del sito</h3>
+    <p>Da <span class="menuentry">Modifica-&gt;Opzioni</span>
+        puoi accedere a una finestra in cui puoi impostare l'URL e le parole
+        chiave utilizzate dal sito Mediawiki di tua scelta.<br>
+        Per italiano, inglese ed altre lingue, le opzioni predefinite sono
+        impostate sulla Wikipedia nella lingua corrispondente</p>
+    <p>Se vuoi usare un sito differente per scaricare le pagine e
+        verificare i collegamenti, devi cambiare i parametri appropriati. <span
+            class="warning">Ricordati di premere invio dopo aver
+            impostato il nuovo valore</span>.</p>
+    <p>Le impostazioni possono essere salvate e caricate da un file
+        usando il menu <span class="menuentry">File</span>
+        interno alla finestra delle opzioni.
+    </p>
+    <h2><a class="mozTocH2" name="mozTocId539616"></a><a
+            class="mozTocH2" name="issues"></a>Problemi
+        noti e miglioramenti previsti</h2>
+    <ul>
+        <li>le impostazioni personalizzate per il sito devono essere
+            caricate ogni volta che si avvia l'editor, non sono memorizzate tra una
+            sessione e l'altra</li>
+        <li>JMathTeX non riconosce alcune parole chiave di TeX come ad
+            esempio
+            \lim</li>
+        <li>a causa della struttura dati utilizzata per la
+            gestione dei nomi dei file, aggiungere una immagine con lo stesso nome
+            di una già presente sovrascriverà la più vecchia. <span
+                class="warning">Questo non è un bug</span>: in
+            Mediawiki puoi fare riferimento a un file usando solo il suo nome, non
+            puoi caricare due file diversi con lo stesso nome</li>
+        <li>c'è un bug nel modo in cui Java visualizza le immagini di
+            cui specifichi la grandezza (per esempio. 200px):
+            la larghezza dell'immagine sarà corretta, mentre l'altezza sarà di
+            26px. Potrei risolvere il problema in futuro. Gli utenti Linux
+            potrebbero non incontrare questo problema.</li>
+    </ul>
+</body>
+</html>

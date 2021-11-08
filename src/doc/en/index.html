@@ -1,0 +1,340 @@
+<!-- 
+    Document   : index.html
+    Created on : 2-gen-2008, 0.15.24
+    Author     : Giuseppe Profiti
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=ISO-8859-1"
+              http-equiv="content-type">
+        <title>SoloWiki Editor manual</title>
+        <style type="text/css">
+            .menuentry {
+                font-style: italic;
+            }
+            .warning {
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Solowiki Editor Manual</h1>
+        <h2><a class="mozTocH2" name="mozTocId677861"></a>Table
+            of contents</h2>
+        <ul id="mozToc">
+            <!--mozToc h2 1 h3 2 h4 3--><li><a
+                    href="#mozTocId677861">Table
+                    of contents</a></li>
+            <li><a href="#mozTocId637650">About</a></li>
+            <li><a href="#mozTocId157662">License</a></li>
+            <li><a href="#mozTocId537982">Installation</a>
+                <ul>
+                    <li><a href="#mozTocId512384">Uninstalling</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId925490">Starting
+                    the editor</a></li>
+            <li><a href="#mozTocId46627">The
+                    main window</a>
+                <ul>
+                    <li><a href="#mozTocId480278">The toolbar</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId246335">Editing
+                    features</a>
+                <ul>
+                    <li><a href="#mozTocId522890">Mediawiki
+                            formatting</a>
+                        <ul>
+                            <li><a href="#mozTocId217211">Common markup</a></li>
+                            <li><a href="#mozTocId366698">Add image</a></li>
+                            <li><a href="#mozTocId172538">Format image
+                                    link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#mozTocId579028">How
+                            to create a preview</a></li>
+                    <li><a href="#mozTocId932067">Saving
+                            the text</a></li>
+                    <li><a href="#mozTocId197795">Undo and redo</a></li>
+                    <li><a href="#mozTocId775328">TeX formulas</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId856247">Online
+                    features</a>
+                <ul>
+                    <li><a href="#mozTocId573659">Downloading
+                            a page</a></li>
+                    <li><a href="#mozTocId293318">Checking
+                            links</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId378647">Options</a>
+                <ul>
+                    <li><a href="#mozTocId522465">View
+                            options</a></li>
+                    <li><a href="#mozTocId789632">Website
+                            options</a></li>
+                </ul>
+            </li>
+            <li><a href="#mozTocId539616">Known issues and
+                    planned improvements</a></li>
+        </ul>
+        <h2><a class="mozTocH2" name="mozTocId637650"></a>About</h2>
+        <p><b>SoloWiki Editor</b>
+            is a free software (see <a href="about.shtml#License">license</a>)
+            developed by Giuseppe Profiti. </p>
+        <p>SoloWiki Editor
+            (C) 2008-2010, Giuseppe Profiti</p>
+        <p>If you want to contact me for suggestions, feature request,
+            bug submission
+            or only to say "thanks", feel free to use the forums and other tools
+            provided
+            in the <a id="SoloWiki"
+                      href="https://sourceforge.net/projects/solowiki/">SoloWiki
+                project page</a> on
+            Sourceforge. You can also send me an email at <a
+                href="mailto:gamma2@users.sourceforge.net">gamma2@users.sourceforge.net
+            </a></p>
+        <p>This tool was a gift for Erica, to whom I dedicate this
+            software.</p>
+        <h2><a class="mozTocH2" name="mozTocId157662"></a><a
+                name="License"></a>License</h2>
+        <p>This program is free software; you can redistribute it and/or
+            modify it
+            under the terms of the <a
+                href="http://www.opensource.org/licenses/gpl-license.php">GNU
+                General Public
+                License</a> as published by the Free Software Foundation; version
+            2 of
+            the License. </p>
+        <p>Parsing is done thanks to <a
+                href="http://code.google.com/p/gwtwiki/">Java
+                Wikipedia Api</a>,
+            which is (C) <a href="https://sourceforge.net/users/axelcl">Axel
+                C. Kramer</a>
+            and it is released under the terms of the <a
+                href="http://www.gnu.org/copyleft/lesser.html">GNU Lesser
+                General Public
+                License</a>.</p>
+        <p>StringUtils class is (C) Giuseppe Profiti and it is released
+            under the <a
+                href="http://www.opensource.org/licenses/mit-license.php">MIT
+                License.</a>. </p>
+        <p><a href="https://swing-layout.dev.java.net/">Swing
+                Layout Extensions
+                library</a>, used for Java 1.5 compatibility, is released under
+            the <a href="http://www.gnu.org/copyleft/lesser.html">GNU
+                Lesser General Public
+                License</a>. </p>
+        <p>Icons come from the <a
+                href="http://java.sun.com/developer/techDocs/hi/repository/">Java
+                look and feel
+                Graphics Repository</a> , (C) 2000 by Sun Microsystems, Inc.</p>
+        <p>TeX parsing and image generation is made via <a
+                href="http://jmathtex.sourceforge.net/">JMathTeX</a>
+            library, which is (C) 2004-2007 Universiteit Gent and it is released
+            under the GNU General Public License.</p>
+        <h2><a class="mozTocH2" name="mozTocId537982"></a>Installation</h2>
+        Java 5 or newer is mandatory to run the software.<br>
+    <br>
+    After
+    downloading the software you get a compressed file. To install Solowiki
+    Editor you must decompress the file in a folder. This folder will be
+    the application folder. You don't need to do anything else: everything
+    required by Solowiki Editor will stay in in the selected folder.<br>
+    <h3><a class="mozTocH3" name="mozTocId512384"></a>Uninstalling</h3>
+    To
+    uninstall SoloWiki editor, just remove the folder where you extracted
+    the files. I'll be glad to receive an e-mail from you, containing your
+    opinions, why you don't like the software and what can be improved.
+    <h2><a class="mozTocH2" name="mozTocId925490"></a>Starting
+        the editor</h2>
+    In order to start the editor you can double click on the file
+    SoloWiki.jar or type the following command in a console:<br>
+    <pre>java -jar SoloWiki.jar</pre>
+    <h2><a class="mozTocH3" name="mozTocId46627"></a>The
+        main window</h2>
+    The main window is composed by the main menu, the toolbar, the editing
+    tab, the output tab and the status bar.<br>
+    Not all the features are available from both the toolbar and the menu.<br>
+    <ul>
+        <li>the editing tab is where you type text using Mediawiki
+            markup</li>
+        <li>the output tab is where you can see the generated HTML</li>
+        <li>the status bar will contain useful informations about the
+            status of requested operations</li>
+    </ul>
+    The
+    output can be viewed as rendered HTML (looking like how you can see it
+    in your web browser) or in plain text displaying the HTML tags. This
+    option can be switched from the <span class="menuentry">Actions-&gt;Show
+        full HTML</span> menu.<br>
+    <h3><a class="mozTocH3" name="mozTocId480278"></a>The
+        toolbar</h3>
+    In the toolbar, from left to right, you will see the buttons:<br>
+    <ul>
+        <li>new: creates a new file</li>
+        <li>open file</li>
+        <li>save</li>
+        <li><a href="#mozTocId366698">add image</a></li>
+        <li>braces, bold, italics, underline, h2, h3</li>
+        <li>Img is <a href="#mozTocId172538">format image
+                link</a></li>
+        <li><a href="#mozTocId579028">generate preview</a></li>
+        <li><a href="#mozTocId293318">check links</a></li>
+    </ul>
+    <h2><a class="mozTocH2" name="mozTocId246335"></a>Editing
+        features</h2>
+    <h3><a class="mozTocH3" name="mozTocId522890"></a>Mediawiki
+        formatting</h3>
+    Text can be formatted using both the <span class="menuentry">Style</span>
+    menu and the toolbar buttons. If nothing is selected, the editor will
+    add the requested formatting at the cursor position.<br>
+    If something is selected, the editor will surround the selection with
+    the requested markup.<br>
+    <h4><a class="mozTocH4" name="mozTocId217211"></a>Common
+        markup</h4>
+    Bold,
+    italics, template, h2 and h3 behave like Mediawiki embedded
+    editor: equals, braces and other markup symbols will surround the
+    selection.<br>
+    Underline adds HTML u tag before and after the selection.
+    Nowiki surrounds the selection with &lt;nowiki&gt;. H2 and h3
+    will add
+    2 and 3 equal signs (=) respectively.<br>
+    <h4><a class="mozTocH4" name="mozTocId366698"></a>Add
+        image</h4>
+    Add
+    image lets you choose a file from your local filesystem, the image will
+    be added to the text as [[FILE:filename]] (where FILE is the tag set in
+    the options menu). As example, if you choose the file mydog.jpg from
+    any folder in you filesystem, the program will add [[File:mydog.jpg]]
+    to the text.<br>
+    While saving the generated HTML, the link will point
+    to the absolute file path if the file is not stored in a subdirectory
+    of the HTML destination directory, otherwise the link will point to the
+    relative file path.<br>
+    Check the <span style="text-decoration: underline;"></span><a
+        href="#issues">known issues section</a> for more
+    information about file management.<br>
+    <h4><a class="mozTocH4" name="mozTocId172538"></a>Format
+        image link</h4>
+    <span class="menuentry">Format image link</span>
+    (Img) surrounds the selected text like that: [[FILE:<span
+        style="font-style: italic;">selection</span>|thumb|200px|]].
+    As example, if you select the text mycat.jpg and use <span
+        class="menuentry">Format image link</span>, the text
+    will become [[File:mycat.jpg|thumb|200px|]]. Check the <a
+        href="#issues">known issues section</a> for more
+    information about known bugs.<br>
+    <h3><a class="mozTocH3" name="mozTocId579028"></a>How
+        to create a preview</h3>
+    After you have typed or loaded the text, the preview can be created by
+    pressing ALT+SPACE, via the menu <span class="menuentry">Actions-&gt;Generate
+        preview</span> or pressing the button on the toolbar.<br>
+    The
+    preview will be visible in the output tab. Moving the mouse pointer
+    over a link will show the destination link in the status bar, i.e. if
+    you type [[<span style="font-style: italic;">somewhere</span>|text]]
+     the link <span style="text-decoration: underline;">text</span>
+    will be visible in the
+    output tab and the string <span style="font-style: italic;">somewhere</span>
+    will appear in the status bar.
+    <h3><a class="mozTocH3" name="mozTocId932067"></a>Saving
+        the text</h3>
+    You can save the text containing the Mediawiki syntax and the generated
+    HTML. <span class="menuentry">File-&gt;Save</span>
+    and <span class="menuentry">File-&gt;Save as...</span>
+    and the relative buttons in the toolbar refer to the plain text. If you
+    don't specify a file extension, the editor will add .txt by itself.<br>
+    <span class="menuentry">File-&gt;Export as HTML</span>
+    will recreate the HTML text and save it. If you create a preview,
+    modify the text and save the HTML, the modified version will be saved.<br>
+    An
+    image reference will be relative to the destination path if the image
+    is stored in the destination directory or its subdirectory, otherwise
+    the absolute path will be used. TeX images are stored in the system
+    temporary directory until the HTML page is saved, then the TeX images
+    will be stored in a subdirectory of the destination directory.<br>
+    <h3><a class="mozTocH3" name="mozTocId197795"></a>Undo
+        and redo</h3>
+    You
+    can undo and redo edits made since the last save. Each character typed
+    or deleted counts as one edit. Text formatting added using the buttons
+    (i.e. == ==, {{ }} and so on) is treated as a single edit.
+    <h3><a class="mozTocH3" name="mozTocId775328"></a>TeX
+        formulas</h3>
+    TeX
+    can be embedded using the &lt;math&gt; tag. However the library
+    currently used by Solowiki Editor does not support the full syntax of
+    TeX. See the <a href="#issues">Known issues section</a>
+    for more informations about missing features.
+    <h2><a class="mozTocH2" name="mozTocId856247"></a>Online
+        features</h2>
+    The online features are disabled by default. You can enable it by using
+    the menu <span class="menuentry">Actions-&gt;Online
+        actions</span>.
+    <h3><a class="mozTocH3" name="mozTocId573659"></a>Downloading
+        a page</h3>
+    Instead
+    of typing the text or opening a local file, you can download the text
+    from a remote website using <span class="menuentry">File-&gt;Open
+        from website...</span>. You can type the article name in a dialog
+    window, then the main window will be shown. Be warned: the actual
+    download will take place in the background, so you have to wait until a
+    message in the status bar says that the article has been completely
+    downloaded even if the main window responds to your inputs.
+    <h3><a class="mozTocH3" name="mozTocId293318"></a>Checking
+        links</h3>
+    After
+    the preview has been generated you can verify if the links point to
+    actual pages on the remote website. This feature can be accessed by a
+    button on the toolbar. After clicking the button a new window will
+    open, that window contains a table: each row refers to a link. The
+    first column displays the page name and the second column contains a
+    checkbox: an empty checkbox means that the page does not exist on the
+    remote website. The rows can be ordered by page name or link status,
+    both ascending and descending, by clicking on the column title.
+    <h2><a class="mozTocH2" name="mozTocId378647"></a>Options</h2>
+    <h3><a class="mozTocH3" name="mozTocId522465"></a>View
+        options</h3>
+    You can change the font size in the editor using the <span
+        class="menuentry">View</span> menu.
+    <h3><a class="mozTocH3" name="mozTocId789632"></a>Website
+        options</h3>
+    From <span class="menuentry">Edit-&gt;Options</span>
+    you can access a window where you can set URLs and keywords used in the
+    Mediawiki website of your choice.<br>
+    For English, Italian and some other languages, the options are set on
+    the Wikipedia language equal to your locale by default.<br>
+    If
+    you want to use a different website for link checking and article
+    download, you have to type the appropriate values on the table. <span
+        class="warning">Remember to hit ENTER after setting a value.</span><br>
+    Settings can be saved to and loaded from file using the embedded <span
+        class="menuentry">File</span> menu.
+    <h2><a class="mozTocH2" name="mozTocId539616"></a><a
+            class="mozTocH2" name="issues"></a>Known issues
+        and planned improvements</h2>
+    <ul>
+        <li>customized website options need to be loaded each time the
+            editor is started, they will not be remembered across sessions</li>
+        <li>JMathTeX does not recognize some common TeX keywords like
+            \lim</li>
+        <li>due to the
+            internal data structure used to store filename, adding an image with
+            the same name of an existing one will overwrite the oldest. <span
+                class="warning">This is not a bug</span>: on Mediawiki
+            you can refer to a file only using its name, you can't upload two files
+            with the same name.</li>
+        <li>there is a bug in how Java renders images when you specify
+            their size (i.e. 200px):
+            the width will be correct but the height of the image will be 26px. I
+            may create a workaround for that in the future. Linux users may not be
+            affected by this problem.</li>
+    </ul>
+</body>
+</html>
